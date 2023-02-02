@@ -1,0 +1,153 @@
+/* Color palette */
+/* 
+    https://coolors.co/palette/00a6fb-0582ca-006494-003554-051923
+    #00A6FB
+    #0582CA
+    #006494
+    #003554
+    #051923
+
+    https://coolors.co/palette/ffffff-00171f-003459-007ea7-00a8e8
+    #FFFFFF
+    #00171F
+    #003459
+    #007EA7
+    #00A8E8
+
+    https://coolors.co/palette/bee9e8-62b6cb-1b4965-cae9ff-5fa8d3 
+    #BEE9E8
+    #62B6CB
+    #1B4965
+    #CAE9FF
+    #5FA8D3
+*/
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Righteous', sans-serif;
+    margin: 0;
+    background-color: #051923;
+    color: white;
+}
+#wrapper{
+    text-align: center;
+}
+
+.banner{
+    /* position: fixed; */
+    /* background-image: url(../images/pexels-adrien-olichon-2387793.jpg); */
+    /* background-image: url(../images/pexels-eva-bronzini-7605209.jpg); */
+    background-image: url(../images/pexels-eva-bronzini-7605209\ -\ Stephhhhhhhhhh2.0.jpg);
+    /* background-image: url(../images/pexels-eva-bronzini-7605209\ -\ Stephhhhhhhhhh.jpg); */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    opacity: 90%;
+}
+
+header{
+    height: 200px;
+    opacity: 100%;
+}
+h1{
+    font-size: 3em;
+    padding-top: 80px;
+}
+/* implement a linear gradient to the header text, might be cool */
+h3{
+    font-size: 2em;
+    padding-bottom: 30px;
+    padding-top: 75px;
+}
+
+nav{
+    font-weight: bold;
+    font-size: 1.2em;
+    opacity: 100%;
+}
+nav a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 15px 10px;
+    margin-bottom: 25px;
+}
+nav a:link{
+    color: #5FA8D3;
+}
+nav a:visited{
+    color: #5FA8D3;
+}
+nav a:hover{
+    color: #0582CA;
+    transition: all .5s;
+}
+
+main{
+    height: auto;
+    color: #CAE9FF;
+    padding: auto;
+    padding-left: 18%;
+    padding-right: 18%;
+    /* border: solid #006494; */
+}
+.section{
+    height: 20vh;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* border: solid #006494; */
+}
+.section-text{
+    /* need to handle overflow */
+}
+main p{
+    /* border: solid #006494; */
+    font-size: 1.15em;
+}
+main img{
+    border-radius: 20%;
+}
+.school{
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+}
+.baseball{
+    height: 100%;
+    width: auto;
+}
+
+footer{
+    font-size: .90em;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+.date{
+    font-style: italic;
+    font-size: .60em;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.sideleft{
+    float: left;
+    width: 30%;
+    height: 100%;
+    margin-right: 10px;
+    /* border: solid #006494; */
+}
+.sideright{
+    float: right;
+    width: 50%;
+    height: 100%;
+    margin-left: 10px;
+    /* border: solid #006494; */
+}
