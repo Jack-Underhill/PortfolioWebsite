@@ -1,25 +1,10 @@
 /* Color palette */
 /* 
     https://coolors.co/palette/00a6fb-0582ca-006494-003554-051923
-    #00A6FB
-    #0582CA
-    #006494
-    #003554
-    #051923
 
     https://coolors.co/palette/ffffff-00171f-003459-007ea7-00a8e8
-    #FFFFFF
-    #00171F
-    #003459
-    #007EA7
-    #00A8E8
 
     https://coolors.co/palette/bee9e8-62b6cb-1b4965-cae9ff-5fa8d3 
-    #BEE9E8
-    #62B6CB
-    #1B4965
-    #CAE9FF
-    #5FA8D3
 */
 /* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
@@ -30,52 +15,69 @@
 
 body{
     font-family: 'Righteous', sans-serif;
-    margin: 0;
     background-color: #051923;
     color: white;
+    margin: 0;
+    padding: 0;
 }
 #wrapper{
     text-align: center;
+    margin: 0;
+    
+    padding-top: 0vh;
 }
 
 .banner{
-    /* position: fixed; */
-    /* background-image: url(../images/pexels-adrien-olichon-2387793.jpg); */
-    /* background-image: url(../images/pexels-eva-bronzini-7605209.jpg); */
-    background-image: url(../images/pexels-eva-bronzini-7605209\ -\ Stephhhhhhhhhh2.0.jpg);
-    /* background-image: url(../images/pexels-eva-bronzini-7605209\ -\ Stephhhhhhhhhh.jpg); */
+    background-image: url(../images/pexels-eva-bronzini-7605209.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
-    opacity: 90%;
+    margin: 0;
+    display: table;
+    padding-top: 0vh;
 }
 
 header{
-    height: 200px;
-    opacity: 100%;
+    margin: 0;
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 0vh;
 }
 h1{
-    font-size: 3em;
-    padding-top: 80px;
+    font-size: 4em;
+    margin: 0;
 }
 /* implement a linear gradient to the header text, might be cool */
 h3{
     font-size: 2em;
     padding-bottom: 30px;
     padding-top: 75px;
+    margin: 0;
 }
 
 nav{
-    font-weight: bold;
-    font-size: 1.2em;
-    opacity: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #051923;
+    overflow: hidden;
+}
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav li{
+    display: inline-block;
 }
 nav a{
     text-decoration: none;
-    display: inline-block;
+    display: block;
+    font-weight: bold;
+    font-size: 1.2em;
     padding: 5px 10px;
     margin: 15px 10px;
-    margin-bottom: 25px;
 }
 nav a:link{
     color: #5FA8D3;
@@ -89,24 +91,20 @@ nav a:hover{
 }
 
 main{
-    height: auto;
     color: #CAE9FF;
     padding: auto;
     padding-left: 18%;
     padding-right: 18%;
-    /* border: solid #006494; */
 }
 .section{
     height: 20vh;
     margin-top: 50px;
     margin-bottom: 50px;
-    /* border: solid #006494; */
 }
 .section-text{
     /* need to handle overflow */
 }
 main p{
-    /* border: solid #006494; */
     font-size: 1.15em;
 }
 main img{
@@ -126,7 +124,7 @@ footer{
     font-size: .90em;
     text-align: center;
     padding: 10px;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 .date{
     font-style: italic;
@@ -142,12 +140,88 @@ footer{
     width: 30%;
     height: 100%;
     margin-right: 10px;
-    /* border: solid #006494; */
 }
 .sideright{
     float: right;
     width: 50%;
     height: 100%;
     margin-left: 10px;
-    /* border: solid #006494; */
 }
+
+.page{
+    min-height: 100vh;
+    max-height: fit-content;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+}
+#about{
+    background-image: url(../images/pexels-life-of-pix-7919.jpg);
+    text-align: center;
+    padding-top: 35vh;
+}
+#personal{
+    background-image: url(../images/pexels-mudassir-ali-2680270.jpg);
+    text-align: center;
+    padding-top: 35vh;
+}
+#school{
+    background-image: url(../images/wwu2.jpg);
+    text-align: center;
+    padding-top: 35vh;
+}
+#resume{
+    background-image: url(../images/pexels-jaymantri-5412.jpg);
+    text-align: center;
+    padding-top: 35vh;
+}
+#contacts{
+    background-image: url(../images/pexels-donald-tong-23273.jpg);
+    text-align: center;
+    padding-top: 35vh;
+}
+
+h2{
+    font-size: 2.5em;
+    padding-bottom: 70px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li{
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0;
+    margin: 0 25px;
+}
+svg{
+    display: block;
+    height: 5em;
+    width: auto;
+    color: #fff;
+}
+svg:link{
+    color: #5FA8D3;
+}
+svg:visited{
+    color: #5FA8D3;
+}
+svg:hover{
+    color: #0582CA;
+    transition: all .5s;
+}
+
+/* border: solid #006494; */
