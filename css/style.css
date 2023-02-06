@@ -48,12 +48,27 @@ h1{
     font-size: 4em;
     margin: 0;
 }
+h2{
+    font-size: 2.5em;
+    padding-bottom: 70px;
+}
 /* implement a linear gradient to the header text, might be cool */
 h3{
     font-size: 2em;
-    padding-bottom: 30px;
+    padding-bottom: 75px;
     padding-top: 75px;
     margin: 0;
+}
+h2, h3{
+    text-shadow: 2px 2px #051923;
+}
+h4{
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+header p{
+    font-size: 1.3em;
+    color: #CAE9FF;
 }
 
 nav{
@@ -92,32 +107,12 @@ nav a:hover{
 
 main{
     color: #CAE9FF;
-    padding: auto;
-    padding-left: 18%;
-    padding-right: 18%;
-}
-.section{
-    height: 20vh;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-.section-text{
-    /* need to handle overflow */
 }
 main p{
     font-size: 1.15em;
 }
 main img{
     border-radius: 20%;
-}
-.school{
-    height: 100%;
-    width: auto;
-    max-width: 100%;
-}
-.baseball{
-    height: 100%;
-    width: auto;
 }
 
 footer{
@@ -131,8 +126,37 @@ footer{
     font-size: .60em;
 }
 
-.clearfix{
-    clear: both;
+.page{
+    min-height: 100vh;
+    max-height: fit-content;
+    background-repeat: no-repeat;
+    /* background-size: 100% 100%; */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+    text-align: center;
+}
+#about{
+    background-image: url(../images/pexels-life-of-pix-7919.jpg);
+    padding-top: 35vh;
+    padding: 10vh 15%;
+}
+#personal{
+    background-image: url(../images/pexels-mudassir-ali-2680270.jpg);
+    padding-top: 10vh;
+}
+#school{
+    background-image: url(../images/wwu2.jpg);
+    padding-top: 10vh;
+}
+#resume{
+    background-image: url(../images/pexels-jaymantri-5412.jpg);
+    padding: 15vh 0;
+}
+#contacts{
+    background-image: url(../images/pexels-donald-tong-23273.jpg);
+    padding-top: 35vh;
 }
 
 .sideleft{
@@ -147,45 +171,136 @@ footer{
     height: 100%;
     margin-left: 10px;
 }
+.clearfix{
+    clear: both;
+}
 
-.page{
-    min-height: 100vh;
-    max-height: fit-content;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    margin: 0;
+/* About */
+.section{
+    height: 20vh;
+    margin: 40px 0;
+}
+.section-text{
+    text-shadow: 2px 2px #051923;
+    /* need to handle overflow */
+}
+.school{
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    box-shadow: 0 6px 8px #051923;
+}
+.baseball{
+    height: 100%;
+    width: auto;
+    box-shadow: 0 6px 8px #051923;
+}
+
+/* Personal */
+.two-column{
+    width: 90%;
+    margin: auto;
+}
+.card{
+    margin: 0 15px;
+    border-radius: 5%;
+    background-color: #006494;
+    box-shadow: 0 6px 10px #051923;
+}
+.personal1{
+    float: left;
+    width: 45%;
+}
+.personal2{
+    float: right;
+    width: 45%;
+}
+.card-header{
+    font-size: 1.4em;
+    font-weight: bold;
     padding: 0;
-    background-attachment: fixed;
+    margin: 15px 0;
+    text-shadow: 2px 2px #051923;
 }
-#about{
-    background-image: url(../images/pexels-life-of-pix-7919.jpg);
-    text-align: center;
-    padding-top: 35vh;
+.card-img{
+    width: 90%;
+    padding: 0;
+    height: 300px;
+    border-radius: 25%;
+    border-image-width: 100%;
 }
-#personal{
-    background-image: url(../images/pexels-mudassir-ali-2680270.jpg);
-    text-align: center;
-    padding-top: 35vh;
+.card-description{
+    width: 90%;
+    margin: auto;
+    font-size: .9em;
+    height: 113px;
+    overflow: hidden;
+    text-shadow: 1px 1px #051923;
 }
-#school{
-    background-image: url(../images/wwu2.jpg);
-    text-align: center;
-    padding-top: 35vh;
+.button{
+    margin: 15px 5px;
+    padding: 10px 0;
+    border-radius: 30%;
+    background-color: #051923;
+    box-shadow: 0 6px 8px #051923;
 }
-#resume{
-    background-image: url(../images/pexels-jaymantri-5412.jpg);
-    text-align: center;
-    padding-top: 35vh;
+.button a:link{
+    color: #5FA8D3;
 }
-#contacts{
-    background-image: url(../images/pexels-donald-tong-23273.jpg);
-    text-align: center;
-    padding-top: 35vh;
+.button a:visited{
+    color: #5FA8D3;
+}
+.button a:hover{
+    color: #0582CA;
+    transition: all .5s;
+}
+.btn-project{
+    float: left;
+    width: 40%;
+    margin-left: 8%;
+}
+.btn-code{
+    float: right;
+    width: 40%;
+    margin-right: 8%;
 }
 
-h2{
-    font-size: 2.5em;
-    padding-bottom: 70px;
+/* School */
+.three-column{
+    width: 90%;
+    margin: auto;
+}
+.school1{
+    float: left;
+    width: 30%;
+}
+.school2{
+    float: left;
+    width: 30%;
+}
+.school3{
+    float: left;
+    width: 30%;
+}
+
+/* Skills */
+.skills{
+    width: 70%;
+    margin: auto;
+}
+.skill-section{
+    width: 40%;
+    margin-bottom: 200px;
+}
+.backend{
+    float: left;
+}
+.frontend{
+    float: right;
+}
+.btn-resume{
+    width: 20%;
+    margin: auto;
 }
 
 ul{
@@ -198,14 +313,14 @@ ul{
 }
 li{
     display: inline-block;
+    margin: 0 15px;
 }
 a{
     text-decoration: none;
     display: block;
     font-weight: bold;
     font-size: 1.2em;
-    padding: 0;
-    margin: 0 25px;
+    margin: 0 10px;
 }
 svg{
     display: block;
