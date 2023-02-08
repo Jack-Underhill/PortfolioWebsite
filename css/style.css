@@ -28,7 +28,8 @@ body{
 }
 
 .banner{
-    background-image: url(../images/pexels-eva-bronzini-7605209.jpg);
+    /* background-image: url(../images/pexels-eva-bronzini-7605209.jpg); */
+    background-image: url(../images/pexels-josh-fields-3964406.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
@@ -139,11 +140,13 @@ footer{
 }
 #about{
     background-image: url(../images/pexels-life-of-pix-7919.jpg);
+    /* background-image: url(../images/pexels-josh-fields-3964406.jpg); */
     padding-top: 35vh;
     padding: 10vh 15%;
 }
 #personal{
-    background-image: url(../images/pexels-mudassir-ali-2680270.jpg);
+    /* background-image: url(../images/pexels-mudassir-ali-2680270.jpg); */
+    background-image: url(../images/pexels-tim-mossholder-3222686.jpg);
     padding-top: 10vh;
 }
 #school{
