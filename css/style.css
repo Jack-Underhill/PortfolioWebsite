@@ -15,16 +15,13 @@
 
 body{
     font-family: 'Righteous', sans-serif;
-    background-color: #051923;
-    color: white;
     margin: 0;
     padding: 0;
 }
 #wrapper{
     text-align: center;
-    margin: 0;
-    
-    padding-top: 0vh;
+    background-color: #051923;
+    color: white;
 }
 
 .banner{
@@ -32,21 +29,21 @@ body{
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
-    margin: 0;
-    display: table;
-    padding-top: 0vh;
+    height: 100%;
+}
+.home-text-content{
+    padding-top: 40vh;
 }
 
 header{
-    margin: 0;
-    padding: 0;
-    display: table-cell;
-    vertical-align: middle;
-    padding-top: 0vh;
+    height: 70px;
+    text-align: right;
+    line-height: 70px;
 }
 h1{
     font-size: 4em;
     margin: 0;
+    height: 100%;
 }
 h2{
     font-size: 2.5em;
@@ -71,7 +68,40 @@ header p{
     color: #CAE9FF;
 }
 
+/* ham */
+.hamburger-nav{
+    /* top: 0; */
+    /* width: 100%; */
+    /* border: solid #006494;
+    position: fixed; */
+    /* background-color: #051923; */
+}
+label{
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    cursor: pointer;
+    color: #5FA8D3;
+    font-size: 40px;
+    display: none;
+}
+label:hover{
+    color: #0582CA;
+    transition: all .5s;
+}
+#toggle{
+    display: none;
+
+    padding: 0;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    border: 1px solid #006494;
+    position: fixed;
+    background-color: #051923;
+}
 nav{
+    /* display: none; */
     width: 100%;
     position: fixed;
     top: 0;
@@ -80,8 +110,6 @@ nav{
 }
 nav ul{
     list-style-type: none;
-    padding: 0;
-    margin: 0;
 }
 nav li{
     display: inline-block;
@@ -93,6 +121,7 @@ nav a{
     font-size: 1.2em;
     padding: 5px 10px;
     margin: 15px 10px;
+    /* line-height: 70px; */
 }
 nav a:link{
     color: #5FA8D3;
@@ -338,3 +367,69 @@ svg:hover{
 }
 
 /* border: solid #006494; */
+
+/* media queries */
+@media only screen and (max-width:968px) {
+    /* nav {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background-color: #051923;
+        overflow: hidden;
+        transition: all 0.3s;
+        display: none;
+    }
+    nav ul li a{
+        text-decoration: none;
+        display: block;
+        font-weight: bold;
+        font-size: 1.2em;
+        padding: 5px 10px;
+        margin: 15px 10px;
+
+        color: #000;
+    }
+    nav ul li{
+        display: block;
+    }
+    header label{
+        display: block;
+    }
+    #toggle:checked~nav{
+        max-height: 300px;
+        display: block;
+    } */
+
+    /* #toggle{
+        display: block;
+    }
+    label{
+        display: block;
+        cursor: pointer;
+    }
+    nav{
+        margin-top: 70px;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    nav ul {
+        display: block;
+    }
+    nav li {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    nav a{
+        font-size: 0.9em;
+        padding: 0;
+        margin: 0;
+    }
+    #toggle:checked~nav{
+        display: block;
+    } */
+}
+/* @media(max-width:498px) {
+    
+} */
