@@ -1,3 +1,12 @@
+@import 'general/card.css';
+@import 'general/page.css';
+
+@import 'pages/about.css';
+@import 'pages/personal.css';
+@import 'pages/school.css';
+@import 'pages/skills.css';
+@import 'pages/contacts.css';
+
 /* Color palette */
 /* 
     https://coolors.co/palette/00a6fb-0582ca-006494-003554-051923
@@ -8,6 +17,12 @@
 */
 /* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+/* html {
+    scroll-behavior: smooth;
+    scroll-padding: var(--scroll-padding, 150rem);
+    scroll-padding: 100vh;
+} */
 
 * {
     box-sizing: border-box;
@@ -22,35 +37,31 @@ body{
     text-align: center;
     background-color: #051923;
     color: white;
-}
-
-.banner{
-    background-image: url(../images/pexels-josh-fields-3964406.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 100%;
-}
-.home-text-content{
-    padding-top: 40vh;
+    /* border: solid #006494; */
 }
 
 header{
-    height: 70px;
-    text-align: right;
-    line-height: 70px;
+
+}
+header p{
+    font-size: 1.3em;
+    color: #CAE9FF;
 }
 h1{
     font-size: 4em;
     margin: 0;
     height: 100%;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #051923;
 }
 h2{
-    font-size: 2.5em;
+    font-size: 3em;
     padding-bottom: 70px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #051923;
 }
 /* implement a linear gradient to the header text, might be cool */
-h3{
+/* h3{
     font-size: 2em;
     padding-bottom: 75px;
     padding-top: 75px;
@@ -58,23 +69,20 @@ h3{
 }
 h2, h3{
     text-shadow: 2px 2px #051923;
-}
+} */
 h4{
     font-size: 1.3em;
     text-decoration: underline;
 }
-header p{
-    font-size: 1.3em;
-    color: #CAE9FF;
-}
 
 /* ham */
 .hamburger-nav{
-    /* top: 0; */
-    /* width: 100%; */
-    /* border: solid #006494;
-    position: fixed; */
+    top: 0;
+    width: 100%;
+    /* border: solid #006494; */
+    position: fixed;
     /* background-color: #051923; */
+    z-index: 1;
 }
 label{
     position: fixed;
@@ -83,30 +91,30 @@ label{
     cursor: pointer;
     color: #5FA8D3;
     font-size: 40px;
-    display: none;
+    /* display: none; */
 }
 label:hover{
     color: #0582CA;
     transition: all .5s;
 }
 #toggle{
-    display: none;
+    /* display: none; */
 
     padding: 0;
     margin: 0;
     left: 0;
     width: 100%;
-    border: 1px solid #006494;
+    /* border: 1px solid #006494; */
     position: fixed;
-    background-color: #051923;
+    /* background-color: #051923; */
 }
 nav{
-    /* display: none; */
     width: 100%;
     position: fixed;
     top: 0;
     background-color: #051923;
     overflow: hidden;
+    z-index: 1000;
 }
 nav ul{
     list-style-type: none;
@@ -119,9 +127,9 @@ nav a{
     display: block;
     font-weight: bold;
     font-size: 1.2em;
-    padding: 5px 10px;
-    margin: 15px 10px;
-    /* line-height: 70px; */
+    padding: 5px 15px;
+    margin: 15px 20px;
+    line-height: 55px;
 }
 nav a:link{
     color: #5FA8D3;
@@ -147,8 +155,7 @@ main img{
 footer{
     font-size: .90em;
     text-align: center;
-    padding: 10px;
-    margin: 20px 0;
+    line-height: 75px;
 }
 .date{
     font-style: italic;
@@ -171,163 +178,48 @@ footer{
     transition: all .5s;
 }
 
-.page{
-    min-height: 100vh;
-    max-height: fit-content;
-    background-repeat: no-repeat;
-    /* background-size: 100% 100%; */
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-    background-attachment: fixed;
-    text-align: center;
-}
 #about{
-    background-image: url(../images/pexels-life-of-pix-7919.jpg);
-    padding-top: 35vh;
+    background-image: url(../images/pexels-josh-fields-3964406.jpg);
+    /* background-image: url(../images/pexels-life-of-pix-7919.jpg); */
     padding: 10vh 15%;
+    padding-top: 25vh;
+    
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
 }
 #personal{
     background-image: url(../images/pexels-tim-mossholder-3222686.jpg);
-    padding-top: 10vh;
+    padding-top: 15vh;
 }
 #school{
     background-image: url(../images/wwu2.jpg);
-    padding-top: 10vh;
+    padding-top: 15vh;
+    
+    /* background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%; */
 }
 #resume{
     background-image: url(../images/pexels-jaymantri-5412.jpg);
-    padding: 15vh 0;
+    padding-top: 15vh;
 }
 #contacts{
     background-image: url(../images/pexels-donald-tong-23273.jpg);
-    padding-top: 35vh;
+    padding-top: 15vh;
 }
 
-.sideleft{
-    float: left;
-    width: 30%;
-    height: 100%;
-    margin-right: 10px;
-}
-.sideright{
-    float: right;
-    width: 50%;
-    height: 100%;
-    margin-left: 10px;
-}
-.clearfix{
-    clear: both;
-}
-
-/* About */
-.section{
-    height: 20vh;
-    margin: 40px 0;
-}
-.section-text{
-    text-shadow: 2px 2px #051923;
-    /* need to handle overflow */
-}
-.school{
-    height: 100%;
-    width: auto;
-    max-width: 100%;
-    box-shadow: 0 6px 8px #051923;
-}
-.baseball{
-    height: 100%;
-    width: auto;
-    box-shadow: 0 6px 8px #051923;
-}
-
-/* Personal */
-.two-column{
-    width: 65%;
+.flex-container{
+    width: 90%;
     margin: auto;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 8%;
-}
-.card{
-    margin: 0 15px;
-    border-radius: 5%;
-    background-color: #006494;
-    box-shadow: 0 6px 10px #051923;
-}
-.card-top{
-    height: 300px;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-    position: relative;
-}
-.card-header{
-    font-size: 2em;
-    font-weight: bold;
-    text-shadow: 3px 4px #051923;
     
-    position: absolute;
-    top: 150px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.card-img{
-    width: 100%;
-    height: 100%;
-    border-radius: 0%;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-}
-.card-description{
-    width: 90%;
-    margin: auto;
-    font-size: .9em;
-    height: fit-content;
-    overflow: hidden;
-    text-shadow: 1px 1px #051923;
-}
-.card-buttons{
-    width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 5%;
-}
-.btn-work{
-    padding: 10px 0;
-    border-radius: 30%;
-}
-
-/* School */
-.three-column{
-    width: 75%;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2%;
-}
-
-/* Skills */
-.skills{
-    width: 70%;
-    margin: auto;
-}
-.skill-section{
-    width: 40%;
-    margin-bottom: 200px;
-}
-.backend{
-    float: left;
-}
-.frontend{
-    float: right;
-}
-.btn-resume{
-    width: 15%;
-    margin: auto;
-    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 ul{
@@ -369,8 +261,8 @@ svg:hover{
 /* border: solid #006494; */
 
 /* media queries */
-@media only screen and (max-width:968px) {
-    /* nav {
+/*@media only screen and (max-width:968px) {
+     nav {
         width: 100%;
         position: fixed;
         top: 0;
@@ -407,10 +299,14 @@ svg:hover{
         display: block;
         cursor: pointer;
     }
+    #toggle:checked>nav{
+        display: block;
+    }
     nav{
         margin-top: 70px;
         text-align: center;
         width: 100%;
+
         display: none;
     }
     nav ul {
@@ -425,11 +321,10 @@ svg:hover{
         font-size: 0.9em;
         padding: 0;
         margin: 0;
-    }
-    #toggle:checked~nav{
-        display: block;
-    } */
-}
+    } 
+}*/
 /* @media(max-width:498px) {
     
 } */
+
+/* wait till js to do the screen changes. (media queries) */

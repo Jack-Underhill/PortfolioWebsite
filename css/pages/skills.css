@@ -1,0 +1,31 @@
+
+/* Skills */
+.skills{
+    width: 90%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 250px;
+    row-gap: 80px;
+    flex-wrap: wrap;
+}
+.skill-section{
+    /* width: 40%; */
+    width: fit-content;
+    /* margin-bottom: 200px; */
+}
+/* .backend{
+    float: left;
+}
+.frontend{
+    float: right;
+} */
+.btn-resume{
+    width: 15%;
+    margin: auto;
+    padding: 15px 0;
+    margin-top: 200px;
+}
