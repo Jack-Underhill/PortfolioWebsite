@@ -12,12 +12,12 @@ nav a:hover{
 
 /* Desktop */
 .desktop{
+    z-index: 1000;
     width: 100%;
     position: fixed;
     top: 0;
     background-color: #051923;
     overflow: hidden;
-    z-index: 1000;
 }
 .desktop ul{
     list-style-type: none;
@@ -37,12 +37,12 @@ nav a:hover{
 
 /* Tablet */
 .tablet{
+    z-index: -1;
     width: 100%;
     position: fixed;
     top: 0;
     background-color: #051923;
     overflow: hidden;
-    z-index: 1000;
 }
 .tablet ul{
     list-style-type: none;
@@ -62,7 +62,7 @@ nav a:hover{
 
 /* mobile */
 .mobile {
-    z-index: 1000;
+    z-index: -1;
     position: fixed;
     top: 0;
     width: 100%;

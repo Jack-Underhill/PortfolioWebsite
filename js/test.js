@@ -69,11 +69,10 @@ function toggleMobile()
     document.querySelector(".personal-photo").style.width = "100%";
 
     // nav
-    $('.desktop').toggle(false);
-    $('.tablet').toggle(false);
-    $('.mobile').toggle(true);
-
-    $('.mobile ul').toggle(false);
+    document.querySelector(".desktop").style.zIndex = "-1";
+    document.querySelector(".tablet").style.zIndex = "-1";
+    document.querySelector(".mobile").style.zIndex = "1000";
+    $('.mobile ul').toggle(false); // untoggle Ham-nav dropdown
 
     //h padding
     let height = "5vh";
@@ -90,11 +89,10 @@ function toggleTablet()
     document.querySelector(".personal-photo").style.width = "100%";
 
     // nav
-    $('.desktop').toggle(false);
-    $('.tablet').toggle(true);
-    $('.mobile').toggle(false);
-
-    $('.mobile ul').toggle(false);
+    document.querySelector(".desktop").style.zIndex = "-1";
+    document.querySelector(".tablet").style.zIndex = "1000";
+    document.querySelector(".mobile").style.zIndex = "-1";
+    $('.mobile ul').toggle(false); // untoggle Ham-nav dropdown
 
     //h padding
     let height = "15vh";
@@ -111,11 +109,10 @@ function toggleDesktop()
     document.querySelector(".personal-photo").style.width = "auto";
 
     // nav
-    $('.desktop').toggle(true);
-    $('.tablet').toggle(false);
-    $('.mobile').toggle(false);
-
-    $('.mobile ul').toggle(false);
+    document.querySelector(".desktop").style.zIndex = "1000";
+    document.querySelector(".tablet").style.zIndex = "-1";
+    document.querySelector(".mobile").style.zIndex = "-1";
+    $('.mobile ul').toggle(false); // untoggle Ham-nav dropdown
 
     //h padding
     let height = "15vh";
@@ -151,4 +148,21 @@ function checkScreen(){
     });
 }
 
-checkScreen();
+function initScreen(){
+    let width = window.innerWidth;
+
+    if(1151 < width)
+    {
+        toggleDesktop();
+    }
+    else if(770 < width)
+    {
+        toggleTablet();
+    }
+    else
+    {
+        toggleMobile();
+    }
+
+    checkScreen();
+}
