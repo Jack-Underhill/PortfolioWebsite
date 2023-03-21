@@ -97,22 +97,12 @@ footer{
     background-image: url(../images/pexels-josh-fields-3964406.jpg);
     padding: 0 100px;
     padding-top: 10vh;
-    
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 100%;
 }
 #personal{
     background-image: url(../images/pexels-tim-mossholder-3222686.jpg);
 }
 #school{
     background-image: url(../images/wwu2.jpg);
-    
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 100%;
 }
 #resume{
     background-image: url(../images/pexels-jaymantri-5412.jpg);
@@ -164,6 +154,7 @@ svg:visited{
     color: #5FA8D3;
 }
 svg:hover{
-    color: #0582CA;
+    color: #006494;
     transition: all .5s;
+    transform: translate(0, -15px);
 }
