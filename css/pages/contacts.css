@@ -9,6 +9,8 @@ form{
     height: 35vh;
     border-radius: 40px;
     overflow: hidden;
+    
+    box-shadow: 0 10px 60px rgba(0, 0, 0, 0.5);
 }
 .form-element{
     background-color: inherit;
@@ -17,6 +19,9 @@ form{
     margin: 0;
     border: 0;
     border-bottom: 1px solid #051923;
+}
+.form-element::placeholder{
+    color: #CAE9FF;
 }
 .form-email{
     height: 5vh;

@@ -1,30 +1,3 @@
-<!-- 
-
-    TO DO:
-        Replace email link in contacts page with inputs to send a email from here. (inputs for: name, email, subject, message).
-
-        Fill in cards. (images, names, descriptions, projects, code)
-
-        Replace page images.
-
-        Organize color palette better. (Max 3 colors? (maybe excluding white))
-
-        Fix Responsiveness. (Media Queries?)
-
-        Hamburger Nav with media queries.
-
-        Animation.
-
-        Javascript. (Form?)
-
-        Table?
-
-        Style sheet for each page? (for its unique attributes, while style.css stays general)
-        
-        buttons need to be relative to the bottom of the card and not to the text above. (to have them all be in same horizontals)
-
- -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,19 +12,40 @@
 <body>
     <div id="wrapper">
         <header>
-            <div class="hamburger-nav">
-                <label for="toggle">&#9776;</label>
-                <input type="checkbox" id="toggle">
-            </div> <!-- hamburger-nav -->
-
             <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#personal">Personal</a></li>
-                    <li><a href="#school">School</a></li>
-                    <li><a href="#resume">Skills</a></li>
-                    <li><a href="#contacts">Contacts</a></li>
-                </ul>
+                <div class="mobile">
+                    <div class="hamburger-nav">
+                        <a onclick="openHamNav()">&#9776;</a>
+                    </div> <!-- hamburger-nav -->
+
+                    <ul>
+                        <li><a href="#about" onclick="openHamNav()">About</a></li>
+                        <li><a href="#personal" onclick="openHamNav()">Personal</a></li>
+                        <li><a href="#school" onclick="openHamNav()">School</a></li>
+                        <li><a href="#resume" onclick="openHamNav()">Skills</a></li>
+                        <li><a href="#contacts" onclick="openHamNav()">Contacts</a></li>
+                    </ul>
+                </div>
+
+                <div class="tablet">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#personal">Personal</a></li>
+                        <li><a href="#school">School</a></li>
+                        <li><a href="#resume">Skills</a></li>
+                        <li><a href="#contacts">Contacts</a></li>
+                    </ul>
+                </div>
+
+                <div class="desktop">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#personal">Personal</a></li>
+                        <li><a href="#school">School</a></li>
+                        <li><a href="#resume">Skills</a></li>
+                        <li><a href="#contacts">Contacts</a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
 
@@ -74,7 +68,6 @@
                     </div> <!-- section-text -->
                 </div> <!-- section -->
             </div> <!-- about -->
-            <div class="clearfix"></div>
 
 
             <div id="personal" class="page">
@@ -91,7 +84,7 @@
                             </p>
                         </div> <!-- card-description -->
                         <div class="card-buttons">
-                            <a class="button btn-work" href="" target="_blank" rel="noopener noreferrer">
+                            <a class="button btn-work" href="#personal" onclick="handleUnfinishedLink()">
                                 View Project
                             </a>
                             <a class="button btn-work" href="https://github.com/Jack-Underhill/PathfinderSim"
@@ -102,28 +95,25 @@
                     </div> <!-- card personal1 -->
                     <div class="card personal2">
                         <div class="card-top">
-                            <div class="card-header">Project 2</div>
-                            <img class="card-img" src="images/Projects/placeholder-image.jpg" alt="">
+                            <div class="card-header">Snake AI</div>
+                            <img class="card-img" src="images/Projects/Snake.png" alt="">
                         </div> <!-- card-top -->
                         <div class="card-description">
                             <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit ipsam expedita consequatur
-                                deserunt consequuntur eligendi dolor sed ut omnis error. Consequatur
-                                deserunt consequuntur eligendi dolor sed ut omnis error, adipisicing elit.
+                                AI algorithm to play the game of snake. Efficiency for both moving to the next target and seting up for the following random target is accounted for.
                             </p>
                         </div> <!-- card-description -->
                         <div class="card-buttons">
-                            <a class="button btn-work" href="" target="_blank" rel="noopener noreferrer">
+                            <a class="button btn-work" href="#personal" onclick="handleUnfinishedLink()">
                                 View Project
                             </a>
-                            <a class="button btn-work" href="" target="_blank" rel="noopener noreferrer">
+                            <a class="button btn-work" href="#personal" onclick="handleUnfinishedLink()">
                                 View Code
                             </a>
                         </div> <!-- card-buttons -->
                     </div> <!-- card personal2 -->
                 </div> <!-- flex-container -->
             </div> <!-- personal -->
-            <div class="clearfix"></div>
 
 
             <div id="school" class="page">
@@ -131,114 +121,75 @@
                 <div class="flex-container">
                     <div class="card school1">
                         <div class="card-top">
-                            <div class="card-header">Project 1</div>
-                            <img class="card-img" src="images/Projects/placeholder-image.jpg" alt="">
+                            <div class="card-header">Woogle Search</div>
+                            <img class="card-img" src="images/Projects/pexels-markus-spiske-225769.jpg" alt="">
                         </div> <!-- card-top -->
                         <div class="card-description">
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, modi.
+                                A search engine from scratch. Allows the control of depth into crawling websites.
                             </p>
                         </div> <!-- card-description -->
                         <div class="card-buttons">
-                            <a class="button btn-work" href="" target="_blank" rel="noopener noreferrer">
+                            <a class="button btn-work" href="#school" onclick="handleUnfinishedLink()">
                                 View Project
                             </a>
-                            <a class="button btn-work" href="" target="_blank" rel="noopener noreferrer">
+                            <a class="button btn-work" href="#school" onclick="handleUnfinishedLink()">
                                 View Code
                             </a>
                         </div> <!-- card-buttons -->
                     </div> <!-- card school1 -->
                     <div class="card school2">
                         <div class="card-top">
-                            <div class="card-header">Project 2</div>
-                            <img class="card-img" src="images/Projects/placeholder-image.jpg" alt="">
+                            <div class="card-header">Segregation Sim</div>
+                            <img class="card-img" src="images/Projects/pexels-thisisengineering-3913025.jpg" alt="">
                         </div> <!-- card-top -->
                         <div class="card-description">
                             <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates minima quae quasi totam recusandae, sint cupiditate, dolore quia quos ducimus doloremque suscipit provident. Saepe perferendis, enim nesciunt magni non est?
+                                The Segregation simulator model is based on the Schelling's model of segregation. The original model utilizes only two groups of the same size. We have a few extras, including: obstacles, randomness, and cost based. 
                             </p>
                         </div> <!-- card-description -->
                         <div class="card-buttons">
-                            <a class="button btn-work" href="" target="_blank" rel="noopener noreferrer">
+                            <a class="button btn-work" href="#school" onclick="handleUnfinishedLink()">
                                 View Project
                             </a>
-                            <a class="button btn-work" href="" target="_blank" rel="noopener noreferrer">
+                            <a class="button btn-work" href="#school" onclick="handleUnfinishedLink()">
                                 View Code
                             </a>
                         </div> <!-- card-buttons -->
                     </div> <!-- card school2 -->
                     <div class="card school3">
                         <div class="card-top">
-                            <div class="card-header">Project 3</div>
-                            <img class="card-img" src="images/Projects/placeholder-image.jpg" alt="">
+                            <div class="card-header">Huffman Coding</div>
+                            <img class="card-img" src="images/Projects/pexels-dan-cristian-paduret-1476321.jpg" alt="">
                         </div> <!-- card-top -->
                         <div class="card-description">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi sit quia ducimus minima recusandae, quos odio sunt mollitia officia maxime fuga doloribus!
+                                Defined by Wiki, "a particular type of optimal prefix code that is commonly used for lossless data compression". Custom implementation.
                             </p>
                         </div> <!-- card-description -->
                         <div class="card-buttons">
-                            <a class="button btn-work" href="" target="_blank" rel="noopener noreferrer">
+                            <a class="button btn-work" href="#school" onclick="handleUnfinishedLink()">
                                 View Project
                             </a>
-                            <a class="button btn-work" href="" target="_blank" rel="noopener noreferrer">
+                            <a class="button btn-work" href="#school" onclick="handleUnfinishedLink()">
                                 View Code
                             </a>
                         </div> <!-- card-buttons -->
                     </div> <!-- card school3 -->
                 </div> <!-- flex-container -->
             </div> <!-- school -->
-            <div class="clearfix"></div>
 
 
             <div id="resume" class="page">
                 <h2>Skills</h2>
                 <div class="skills">
-                    <div class="skill-section backend">
-                        <h4>Backend</h4>
-                        <ul>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
-                                    <g fill="none">
-                                        <rect width="256" height="256" fill="#F4F2ED" rx="60" />
-                                        <path fill="#4E7896"
-                                            d="M101.634 182.619s-7.68 4.674 5.345 6.011c15.728 2.004 24.044 1.669 41.407-1.668c0 0 4.674 3.009 11.02 5.344c-39.075 16.696-88.497-1.002-57.772-9.687Zm-5.009-21.705s-8.35 6.346 4.674 7.679c17.028 1.669 30.391 2.004 53.433-2.667c0 0 3.009 3.341 8.015 5.01c-47.083 14.025-99.85 1.333-66.122-10.019v-.003Zm92.17 38.07s5.676 4.674-6.346 8.35c-22.376 6.678-93.839 8.685-113.876 0c-7.009-3.009 6.347-7.352 10.686-8.015c4.342-1.002 6.678-1.002 6.678-1.002c-7.68-5.344-51.095 11.02-22.041 15.729c79.813 13.027 145.603-5.676 124.896-15.028l.003-.034Zm-83.488-60.781s-36.402 8.685-13.028 11.687c10.019 1.333 29.721 1.002 48.089-.335c15.028-1.334 30.09-4.007 30.09-4.007s-5.345 2.338-9.017 4.674c-37.099 9.693-108.23 5.351-87.858-4.668c17.37-8.35 31.724-7.351 31.724-7.351Zm65.116 36.401c37.407-19.37 20.037-38.07 8.015-35.731c-3.009.667-4.342 1.334-4.342 1.334s1.001-2.004 3.34-2.667c23.709-8.35 42.413 25.046-7.679 38.07c0 0 .335-.335.666-1.002v-.004Zm-61.444 52.76c36.067 2.339 91.168-1.334 92.505-18.369c0 0-2.667 6.678-29.72 11.688c-30.722 5.676-68.796 5.009-91.168 1.333c0 0 4.674 4.007 28.386 5.344l-.003.004Z" />
-                                        <path fill="#F58219"
-                                            d="M147.685 28s20.704 21.039-19.702 52.76c-32.394 25.712-7.351 40.408 0 57.101c-19.035-17.028-32.722-32.059-23.377-46.085C118.331 71.083 156.062 61.064 147.685 28ZM137 123.842c9.683 11.02-2.667 21.039-2.667 21.039s24.711-12.686 13.359-28.387c-10.354-15.028-18.368-22.376 25.046-47.425c0 0-68.461 17.028-35.731 54.766l-.007.007Z" />
-                                    </g>
-                                </svg>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32">
-                                    <path fill="#659ad2"
-                                        d="M29 10.232a2.387 2.387 0 0 0-.318-1.244a2.451 2.451 0 0 0-.936-.879q-5.194-2.868-10.393-5.733a2.642 2.642 0 0 0-2.763.024c-1.378.779-8.275 4.565-10.331 5.706A2.287 2.287 0 0 0 3 10.231V21.77a2.4 2.4 0 0 0 .3 1.22a2.434 2.434 0 0 0 .954.9c2.056 1.141 8.954 4.927 10.332 5.706a2.642 2.642 0 0 0 2.763.026q5.19-2.871 10.386-5.733a2.444 2.444 0 0 0 .955-.9a2.4 2.4 0 0 0 .3-1.22V10.232" />
-                                    <path fill="#00599c"
-                                        d="M28.549 23.171a2.126 2.126 0 0 0 .147-.182a2.4 2.4 0 0 0 .3-1.22V10.232a2.387 2.387 0 0 0-.318-1.244c-.036-.059-.089-.105-.13-.16L16 16Z" />
-                                    <path fill="#004482"
-                                        d="M28.549 23.171L16 16L3.451 23.171a2.435 2.435 0 0 0 .809.72c2.056 1.141 8.954 4.927 10.332 5.706a2.642 2.642 0 0 0 2.763.026q5.19-2.871 10.386-5.733a2.43 2.43 0 0 0 .808-.719Z" />
-                                    <path fill="#fff"
-                                        d="M19.6 18.02a4.121 4.121 0 1 1-.027-4.087l3.615-2.073A8.309 8.309 0 0 0 7.7 16a8.216 8.216 0 0 0 1.1 4.117a8.319 8.319 0 0 0 14.411-.017L19.6 18.02" />
-                                    <path fill="#fff"
-                                        d="M24.076 15.538h-.926v-.921h-.925v.921h-.926v.923h.926v.92h.925v-.92h.926v-.923zm3.473 0h-.926v-.921h-.926v.921h-.926v.923h.926v.92h.926v-.92h.926v-.923z" />
-                                </svg>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
-                                    <g fill="none">
-                                        <rect width="256" height="256" fill="#953CAD" rx="60" />
-                                        <path fill="#fff"
-                                            d="M195.436 100.668v13.474h13.474v-13.474h6.737v13.474h13.473v6.737h-13.473v13.473h13.473v6.737h-13.473v13.474h-6.737v-13.474h-13.474v13.474h-6.737v-13.474h-13.473v-6.737h13.473v-13.473h-13.473v-6.737h13.473v-13.474h6.737Zm13.474 20.211h-13.474v13.473h13.474v-13.473Z" />
-                                        <path fill="#fff"
-                                            d="M122.001 33c35.143 0 65.827 19.086 82.261 47.456l-.16-.273l-41.349 23.808c-8.146-13.793-23.081-23.102-40.213-23.293l-.539-.003c-26.126 0-47.306 21.179-47.306 47.304a47.08 47.08 0 0 0 6.239 23.47c8.154 14.235 23.482 23.837 41.067 23.837c17.692 0 33.108-9.724 41.221-24.111l-.197.345l41.286 23.918c-16.254 28.13-46.517 47.157-81.252 47.536l-1.058.006c-35.255 0-66.026-19.204-82.419-47.724C31.579 161.353 27 145.212 27 127.999C27 75.533 69.532 33 122.001 33Z" />
-                                    </g>
-                                </svg>
-                            </li>
-                        </ul>
-                    </div> <!-- skill-section backend -->
-                    <div class="skill-section frontend">
-                        <h4>Frontend</h4>
-                        <ul>
-                            <li>
+                    <table>
+                        <tr>
+                            <th class="frontend">Frontend</th>
+                            <th class="backend">Backend</th>
+                        </tr>
+                        <tr>
+                            <td class="frontend">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="0.71em" height="1em"
                                     viewBox="0 0 256 361">
                                     <path fill="#E44D26"
@@ -251,8 +202,21 @@
                                     <path fill="#FFF"
                                         d="M127.89 220.573h39.327l-3.708 41.42l-35.62 9.614v33.226l65.473-18.145l.48-5.396l7.506-84.08l.779-8.576H127.89v31.937Zm0-64.719v.078h77.143l.64-7.178l1.456-16.191l.763-8.568H127.89v31.86Z" />
                                 </svg>
-                            </li>
-                            <li>
+                            </td>
+                            <td class="backend">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+                                    <g fill="none">
+                                        <rect width="256" height="256" fill="#F4F2ED" rx="60" />
+                                        <path fill="#4E7896"
+                                            d="M101.634 182.619s-7.68 4.674 5.345 6.011c15.728 2.004 24.044 1.669 41.407-1.668c0 0 4.674 3.009 11.02 5.344c-39.075 16.696-88.497-1.002-57.772-9.687Zm-5.009-21.705s-8.35 6.346 4.674 7.679c17.028 1.669 30.391 2.004 53.433-2.667c0 0 3.009 3.341 8.015 5.01c-47.083 14.025-99.85 1.333-66.122-10.019v-.003Zm92.17 38.07s5.676 4.674-6.346 8.35c-22.376 6.678-93.839 8.685-113.876 0c-7.009-3.009 6.347-7.352 10.686-8.015c4.342-1.002 6.678-1.002 6.678-1.002c-7.68-5.344-51.095 11.02-22.041 15.729c79.813 13.027 145.603-5.676 124.896-15.028l.003-.034Zm-83.488-60.781s-36.402 8.685-13.028 11.687c10.019 1.333 29.721 1.002 48.089-.335c15.028-1.334 30.09-4.007 30.09-4.007s-5.345 2.338-9.017 4.674c-37.099 9.693-108.23 5.351-87.858-4.668c17.37-8.35 31.724-7.351 31.724-7.351Zm65.116 36.401c37.407-19.37 20.037-38.07 8.015-35.731c-3.009.667-4.342 1.334-4.342 1.334s1.001-2.004 3.34-2.667c23.709-8.35 42.413 25.046-7.679 38.07c0 0 .335-.335.666-1.002v-.004Zm-61.444 52.76c36.067 2.339 91.168-1.334 92.505-18.369c0 0-2.667 6.678-29.72 11.688c-30.722 5.676-68.796 5.009-91.168 1.333c0 0 4.674 4.007 28.386 5.344l-.003.004Z" />
+                                        <path fill="#F58219"
+                                            d="M147.685 28s20.704 21.039-19.702 52.76c-32.394 25.712-7.351 40.408 0 57.101c-19.035-17.028-32.722-32.059-23.377-46.085C118.331 71.083 156.062 61.064 147.685 28ZM137 123.842c9.683 11.02-2.667 21.039-2.667 21.039s24.711-12.686 13.359-28.387c-10.354-15.028-18.368-22.376 25.046-47.425c0 0-68.461 17.028-35.731 54.766l-.007.007Z" />
+                                    </g>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="frontend">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="0.71em" height="1em"
                                     viewBox="0 0 256 361">
                                     <path fill="#264DE4"
@@ -265,8 +229,24 @@
                                     <path fill="#FFF"
                                         d="m202.127 188.636l5.765-64.641H127.89v31.937h45.002l-2.906 32.704H127.89v31.937h39.327l-3.708 41.42l-35.62 9.614v33.226l65.473-18.145l.48-5.396l7.506-84.08l.779-8.576Z" />
                                 </svg>
-                            </li>
-                            <li>
+                            </td>
+                            <td class="backend">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32">
+                                    <path fill="#659ad2"
+                                        d="M29 10.232a2.387 2.387 0 0 0-.318-1.244a2.451 2.451 0 0 0-.936-.879q-5.194-2.868-10.393-5.733a2.642 2.642 0 0 0-2.763.024c-1.378.779-8.275 4.565-10.331 5.706A2.287 2.287 0 0 0 3 10.231V21.77a2.4 2.4 0 0 0 .3 1.22a2.434 2.434 0 0 0 .954.9c2.056 1.141 8.954 4.927 10.332 5.706a2.642 2.642 0 0 0 2.763.026q5.19-2.871 10.386-5.733a2.444 2.444 0 0 0 .955-.9a2.4 2.4 0 0 0 .3-1.22V10.232" />
+                                    <path fill="#00599c"
+                                        d="M28.549 23.171a2.126 2.126 0 0 0 .147-.182a2.4 2.4 0 0 0 .3-1.22V10.232a2.387 2.387 0 0 0-.318-1.244c-.036-.059-.089-.105-.13-.16L16 16Z" />
+                                    <path fill="#004482"
+                                        d="M28.549 23.171L16 16L3.451 23.171a2.435 2.435 0 0 0 .809.72c2.056 1.141 8.954 4.927 10.332 5.706a2.642 2.642 0 0 0 2.763.026q5.19-2.871 10.386-5.733a2.43 2.43 0 0 0 .808-.719Z" />
+                                    <path fill="#fff"
+                                        d="M19.6 18.02a4.121 4.121 0 1 1-.027-4.087l3.615-2.073A8.309 8.309 0 0 0 7.7 16a8.216 8.216 0 0 0 1.1 4.117a8.319 8.319 0 0 0 14.411-.017L19.6 18.02" />
+                                    <path fill="#fff"
+                                        d="M24.076 15.538h-.926v-.921h-.925v.921h-.926v.923h.926v.92h.925v-.92h.926v-.923zm3.473 0h-.926v-.921h-.926v.921h-.926v.923h.926v.92h.926v-.92h.926v-.923z" />
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="frontend">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
                                     <g fill="none">
                                         <rect width="256" height="256" fill="#F0DB4F" rx="60" />
@@ -274,31 +254,41 @@
                                             d="m67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371c7.905 0 12.889-3.092 12.889-15.12v-81.798h24.058v82.138c0 24.917-14.606 36.259-35.916 36.259c-19.245 0-30.416-9.967-36.087-21.996m85.07-2.576l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607c9.969 0 16.325-4.984 16.325-11.858c0-8.248-6.53-11.17-17.528-15.98l-6.013-2.579c-17.357-7.388-28.871-16.668-28.871-36.258c0-18.044 13.748-31.792 35.229-31.792c15.294 0 26.292 5.328 34.196 19.247l-18.731 12.029c-4.125-7.389-8.591-10.31-15.465-10.31c-7.046 0-11.514 4.468-11.514 10.31c0 7.217 4.468 10.139 14.778 14.608l6.014 2.577c20.449 8.765 31.963 17.699 31.963 37.804c0 21.654-17.012 33.51-39.867 33.51c-22.339 0-36.774-10.654-43.819-24.574" />
                                     </g>
                                 </svg>
-                            </li>
-                        </ul>
-                    </div> <!-- skill-section frontend -->
+                            </td>
+                            <td class="backend">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+                                    <g fill="none">
+                                        <rect width="256" height="256" fill="#953CAD" rx="60" />
+                                        <path fill="#fff"
+                                            d="M195.436 100.668v13.474h13.474v-13.474h6.737v13.474h13.473v6.737h-13.473v13.473h13.473v6.737h-13.473v13.474h-6.737v-13.474h-13.474v13.474h-6.737v-13.474h-13.473v-6.737h13.473v-13.473h-13.473v-6.737h13.473v-13.474h6.737Zm13.474 20.211h-13.474v13.473h13.474v-13.473Z" />
+                                        <path fill="#fff"
+                                            d="M122.001 33c35.143 0 65.827 19.086 82.261 47.456l-.16-.273l-41.349 23.808c-8.146-13.793-23.081-23.102-40.213-23.293l-.539-.003c-26.126 0-47.306 21.179-47.306 47.304a47.08 47.08 0 0 0 6.239 23.47c8.154 14.235 23.482 23.837 41.067 23.837c17.692 0 33.108-9.724 41.221-24.111l-.197.345l41.286 23.918c-16.254 28.13-46.517 47.157-81.252 47.536l-1.058.006c-35.255 0-66.026-19.204-82.419-47.724C31.579 161.353 27 145.212 27 127.999C27 75.533 69.532 33 122.001 33Z" />
+                                    </g>
+                                </svg>
+                            </td>
+                        </tr>
+                    </table>
                 </div> <!-- skills -->
-                <div class="clearfix"></div>
                 <a class="button btn-resume" href="bin/JackUnderhill-Resume.pdf" target="_blank"
                     rel="noopener noreferrer">
                     View Resume
                 </a>
             </div> <!-- skills -->
-            <div class="clearfix"></div>
 
 
             <div id="contacts" class="page">
                 <h2>Contact Me</h2>
-                <form onsubmit="sendEmail(); reset(); return false;" action="#" method="post">
+                <!-- <form onsubmit="sendEmail(); reset(); return false;" action="#" method="post"> -->
+                <form onsubmit="return FormValidate();" action="#about" method="post">
                     <div class="form-email">
-                        <input type="email" name="email" id="email" class="form-element" placeholder="Enter your email" required>
+                        <input type="email" name="email" id="email" class="form-element" placeholder="Enter your email">
                     </div> <!-- form-email -->
                     <div class="name-subject">
                         <div class="form-name">
-                            <input type="text" name="name" id="name" class="form-element" placeholder="Enter your name" required>
+                            <input type="text" name="name" id="name" class="form-element" placeholder="Enter your name">
                         </div> <!-- form-name -->
                         <div class="form-subject">
-                            <input type="subject" name="subject" class="form-element" id="subject" placeholder="Enter the subject" required>
+                            <input name="subject" class="form-element" id="subject" placeholder="Enter the subject">
                         </div> <!-- form-subject -->
                     </div> <!-- name-subject -->
                     <div class="form-comment">
@@ -309,35 +299,11 @@
                     </div> <!-- form-submit -->
                 </form>
                 <script src="https://smtpjs.com/v3/smtp.js"></script>
-                <script>
-                    function sendEmail()
-                    {
-                        Email.send({
-                            SecureToken : "05e471dc-819d-4b49-9a01-519e36d6df26",
-                            To : 'jmunderhill24@gmail.com',
-                            From : document.getElementById("email").value,
-                            Subject : document.getElementById("subject").value,
-                            Body : "Name: " + document.getElementById("name").value 
-                            + "<br> Email: " + document.getElementById("email").value
-                            + "<br><br> Message: " +  document.getElementById("comment").value
-                        }).then(
-                            message => alert(message)
-                        );
-                    }
-                </script>
 
                 <div class="socials">
                     <ul>
-                        <!-- <li> email
-                            <a href="mailto:jack.underhill17@gmail.com">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                                    <path fill="currentColor"
-                                        d="m20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z" />
-                                </svg>
-                            </a>
-                        </li> -->
                         <li> <!-- linked in -->
-                            <a href="#">
+                            <a href="#contacts" onclick="handleUnfinishedLink()">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                     <path fill="currentColor"
                                         d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z" />
@@ -353,8 +319,7 @@
                             </a>
                         </li>
                         <li> <!-- discord -->
-                            <a href="https://discordapp.com/users/Jack Underhill#9781/" target="_blank"
-                                rel="noopener noreferrer">
+                            <a href="#contacts" onclick="handleUnfinishedLink()">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32">
                                     <path fill="currentColor"
                                         d="M26.964 0c1.875 0 3.385 1.516 3.474 3.302V32l-3.568-3.031l-1.958-1.781l-2.141-1.865l.891 2.938H4.948c-1.87 0-3.385-1.417-3.385-3.302V3.308c0-1.786 1.516-3.302 3.391-3.302h22zm-8.157 7.578h-.042l-.271.266c2.766.802 4.104 2.052 4.104 2.052c-1.781-.891-3.391-1.339-4.995-1.521c-1.156-.177-2.318-.083-3.297 0h-.271c-.625 0-1.958.271-3.745.984c-.62.271-.979.448-.979.448s1.333-1.339 4.281-2.052l-.182-.177s-2.229-.089-4.635 1.693c0 0-2.406 4.193-2.406 9.359c0 0 1.333 2.318 4.99 2.406c0 0 .536-.708 1.073-1.333c-2.052-.625-2.854-1.875-2.854-1.875s.182.089.448.266h.078c.042 0 .063.021.083.042v.01c.021.021.042.036.078.036c.443.182.88.359 1.24.536c.625.266 1.422.536 2.401.714c1.24.182 2.661.266 4.281 0c.797-.182 1.599-.354 2.401-.714c.516-.266 1.156-.531 1.859-.984c0 0-.797 1.25-2.938 1.875c.438.62 1.057 1.333 1.057 1.333c3.661-.083 5.083-2.401 5.161-2.302c0-5.161-2.422-9.359-2.422-9.359c-2.177-1.62-4.219-1.682-4.578-1.682l.073-.026zm.224 5.886c.938 0 1.693.797 1.693 1.776c0 .99-.76 1.786-1.693 1.786c-.938 0-1.693-.797-1.693-1.776c0-.99.76-1.786 1.693-1.786zm-6.057 0c.932 0 1.688.797 1.688 1.776c0 .99-.76 1.786-1.693 1.786c-.938 0-1.698-.797-1.698-1.776c0-.99.76-1.786 1.698-1.786z" />
@@ -362,9 +327,8 @@
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> <!-- socials -->
             </div> <!-- contacts -->
-            <div class="clearfix"></div>
         </main>
 
         <footer>
@@ -379,6 +343,7 @@
     <script src="js/jquery-3.5.1.js"></script>
     <script src="js/jquery.cycle.all.js"></script>
     <script src="js/test.js"></script>
+    <script>openHamNav();</script> <!-- disable ham -->
 </body>
 
 </html>

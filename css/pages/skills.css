@@ -3,29 +3,39 @@
 .skills{
     width: 90%;
     margin: auto;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    column-gap: 250px;
-    row-gap: 80px;
-    flex-wrap: wrap;
 }
-.skill-section{
-    /* width: 40%; */
-    width: fit-content;
-    /* margin-bottom: 200px; */
-}
-/* .backend{
-    float: left;
-}
-.frontend{
-    float: right;
-} */
 .btn-resume{
     width: 15%;
     margin: auto;
     padding: 15px 0;
-    margin-top: 200px;
+    margin-top: 80px;
+}
+
+table, th, td{
+    border-collapse: collapse;
+}
+table{
+    box-shadow: 0 10px 60px rgba(0, 0, 0, 0.4);
+    margin: 0 auto;
+}
+th{
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+th, td{
+    padding: 20px 40px;
+    text-align: center;
+    opacity: 0.9;
+}
+th h4{
+    padding: 0;
+    padding-top: 10px;
+    margin: 0;
+}
+td svg{
+    height: 8vh;
+    margin: 0 auto;
+}
+.active, td:hover{
+    background-color: #5FA8D3;
 }

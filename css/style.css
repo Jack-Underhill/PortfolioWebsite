@@ -1,28 +1,25 @@
+@import 'general/navs.css';
 @import 'general/card.css';
 @import 'general/page.css';
 
 @import 'pages/about.css';
-@import 'pages/personal.css';
-@import 'pages/school.css';
 @import 'pages/skills.css';
 @import 'pages/contacts.css';
 
-/* Color palette */
+
+/* Copyright */
 /* 
-    https://coolors.co/palette/00a6fb-0582ca-006494-003554-051923
+    All photos are mine except: 
 
-    https://coolors.co/palette/ffffff-00171f-003459-007ea7-00a8e8
+        those named pexels-(name) from:
+            (https://www.pexels.com/).
 
-    https://coolors.co/palette/bee9e8-62b6cb-1b4965-cae9ff-5fa8d3 
+        The 2 WWU photos are from: 
+            https://www.timeshighereducation.com/sites/default/files/institution/header_image/header_2_0.jpg
+            https://admissions.wwu.edu/files/2021-03/24112634383_66c01be723_b.jpg 
 */
-/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-/* html {
-    scroll-behavior: smooth;
-    scroll-padding: var(--scroll-padding, 150rem);
-    scroll-padding: 100vh;
-} */
 
 * {
     box-sizing: border-box;
@@ -36,18 +33,15 @@ body{
 #wrapper{
     text-align: center;
     background-color: #051923;
-    color: white;
-    /* border: solid #006494; */
+    color: #CAE9FF;
 }
 
-header{
-
-}
 header p{
     font-size: 1.3em;
     color: #CAE9FF;
 }
 h1{
+    padding-top: 25vh;
     font-size: 4em;
     margin: 0;
     height: 100%;
@@ -55,91 +49,12 @@ h1{
     -webkit-text-stroke-color: #051923;
 }
 h2{
+    padding-top: 15vh;
     font-size: 3em;
-    padding-bottom: 70px;
+    margin: 0;
+    padding-bottom: 55px;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #051923;
-}
-/* implement a linear gradient to the header text, might be cool */
-/* h3{
-    font-size: 2em;
-    padding-bottom: 75px;
-    padding-top: 75px;
-    margin: 0;
-}
-h2, h3{
-    text-shadow: 2px 2px #051923;
-} */
-h4{
-    font-size: 1.3em;
-    text-decoration: underline;
-}
-
-/* ham */
-.hamburger-nav{
-    top: 0;
-    width: 100%;
-    /* border: solid #006494; */
-    position: fixed;
-    /* background-color: #051923; */
-    z-index: 1;
-}
-label{
-    position: fixed;
-    top: 20px;
-    right: 40px;
-    cursor: pointer;
-    color: #5FA8D3;
-    font-size: 40px;
-    /* display: none; */
-}
-label:hover{
-    color: #0582CA;
-    transition: all .5s;
-}
-#toggle{
-    /* display: none; */
-
-    padding: 0;
-    margin: 0;
-    left: 0;
-    width: 100%;
-    /* border: 1px solid #006494; */
-    position: fixed;
-    /* background-color: #051923; */
-}
-nav{
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background-color: #051923;
-    overflow: hidden;
-    z-index: 1000;
-}
-nav ul{
-    list-style-type: none;
-}
-nav li{
-    display: inline-block;
-}
-nav a{
-    text-decoration: none;
-    display: block;
-    font-weight: bold;
-    font-size: 1.2em;
-    padding: 5px 15px;
-    margin: 15px 20px;
-    line-height: 55px;
-}
-nav a:link{
-    color: #5FA8D3;
-}
-nav a:visited{
-    color: #5FA8D3;
-}
-nav a:hover{
-    color: #0582CA;
-    transition: all .5s;
 }
 
 main{
@@ -180,9 +95,8 @@ footer{
 
 #about{
     background-image: url(../images/pexels-josh-fields-3964406.jpg);
-    /* background-image: url(../images/pexels-life-of-pix-7919.jpg); */
-    padding: 10vh 15%;
-    padding-top: 25vh;
+    padding: 0 100px;
+    padding-top: 10vh;
     
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -191,24 +105,20 @@ footer{
 }
 #personal{
     background-image: url(../images/pexels-tim-mossholder-3222686.jpg);
-    padding-top: 15vh;
 }
 #school{
     background-image: url(../images/wwu2.jpg);
-    padding-top: 15vh;
     
-    /* background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
-    height: 100%; */
+    height: 100%;
 }
 #resume{
     background-image: url(../images/pexels-jaymantri-5412.jpg);
-    padding-top: 15vh;
 }
 #contacts{
     background-image: url(../images/pexels-donald-tong-23273.jpg);
-    padding-top: 15vh;
 }
 
 .flex-container{
@@ -257,74 +167,3 @@ svg:hover{
     color: #0582CA;
     transition: all .5s;
 }
-
-/* border: solid #006494; */
-
-/* media queries */
-/*@media only screen and (max-width:968px) {
-     nav {
-        width: 100%;
-        position: fixed;
-        top: 0;
-        background-color: #051923;
-        overflow: hidden;
-        transition: all 0.3s;
-        display: none;
-    }
-    nav ul li a{
-        text-decoration: none;
-        display: block;
-        font-weight: bold;
-        font-size: 1.2em;
-        padding: 5px 10px;
-        margin: 15px 10px;
-
-        color: #000;
-    }
-    nav ul li{
-        display: block;
-    }
-    header label{
-        display: block;
-    }
-    #toggle:checked~nav{
-        max-height: 300px;
-        display: block;
-    } */
-
-    /* #toggle{
-        display: block;
-    }
-    label{
-        display: block;
-        cursor: pointer;
-    }
-    #toggle:checked>nav{
-        display: block;
-    }
-    nav{
-        margin-top: 70px;
-        text-align: center;
-        width: 100%;
-
-        display: none;
-    }
-    nav ul {
-        display: block;
-    }
-    nav li {
-        display: block;
-        margin: 0;
-        padding: 0;
-    }
-    nav a{
-        font-size: 0.9em;
-        padding: 0;
-        margin: 0;
-    } 
-}*/
-/* @media(max-width:498px) {
-    
-} */
-
-/* wait till js to do the screen changes. (media queries) */

@@ -1,56 +1,9 @@
 /* About */
-/* .section{
-    height: 20vh;
-    margin: 40px 0;
-}
-.section-text{
-    text-shadow: 2px 2px #051923;
-}
-.school{
-    height: 100%;
-    width: auto;
-    max-width: 100%;
-    box-shadow: 0 6px 8px #051923;
-}
-.baseball{
-    height: 100%;
-    width: auto;
-    box-shadow: 0 6px 8px #051923;
-}
-
-.sideleft{
-    float: left;
-    width: 30%;
-    height: 100%;
-    margin-right: 10px;
-}
-.sideright{
-    float: right;
-    width: 50%;
-    height: 100%;
-    margin-left: 10px;
-}
-.clearfix{
-    clear: both;
-} */
-
-
-
-
 
 .section{
-    /* height: 30vh; */
-    /* margin: 40px 0; */
-
-    /* border: solid #006494; */
     width: fit-content;
     margin: 0 auto;
     margin-top: 70px;
-    /* padding: 15px 20px; */
-    padding-right: 30px;
-
-    /* display: flex;
-    flex-direction: column; */
     
     display: flex;
     flex-direction: row;
@@ -61,49 +14,22 @@
 
     background-color: #051923;
     border-radius: 5%;
-    /* padding: auto 15px; */
-    /* padding: 10px 0; */
     overflow: hidden;
 }
 .personal-photo{
     height: 300px;
-    width: auto;
-    /* margin: 0 auto; */
-    /* border: solid #006494; */
-    /* margin: 0; */
+    width: 100%;
     background-color: #CAE9FF;
     padding: 15px 20px;
 }
 .personal-photo img{
     height: 100%;
     width: auto;
-    /* max-width: 100%; */
     box-shadow: 0 6px 8px #051923;
     border-radius: 100%;
 }
 .section-text{
     width: 600px;
     margin: 0;
-    padding-right: 0;
-    /* text-shadow: 2px 2px 10px #051923; */
-
-    /* background-color: #006494;
-    border-radius: 10%;
-    padding: auto 15px; */
+    padding: 0 30px;
 }
-/* 
-.sideleft{
-    float: left;
-    width: 30%;
-    height: 100%;
-    margin-right: 10px;
-}
-.sideright{
-    float: right;
-    width: 50%;
-    height: 100%;
-    margin-left: 10px;
-}
-.clearfix{
-    clear: both;
-} */
